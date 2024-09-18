@@ -1,0 +1,197 @@
+body {
+    background-color: #e9e9e9;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    line-height: 1.2;
+    letter-spacing: 0.5px;
+    height: 100vh;
+    background-image: url(./image.jpg);
+    background-size: 100% 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+  }
+
+  * {
+    box-sizing: border-box;
+    transition: .25s all ease;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  .login-container {
+    display: block;
+    position: relative;
+    z-index: 0;
+    margin: 0rem auto;
+    padding: 2rem;
+    width: 100%;
+    max-width: 400px;
+    min-height: 500px;
+    box-shadow: 0 30px 40px -15px rgba(0, 0, 0, 0.75);
+  }
+
+  .login-container:after {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: radial-gradient(ellipse at left bottom, rgba(202, 202, 202, 0.792) 0%, rgba(168, 168, 168, 0.638) 59%, rgba(123, 123, 123, 0.9) 100%);
+    box-shadow: 0 -15px 100px -15px rgba(0, 0, 0, 0.5);
+  }
+
+  .form-login {
+    position: relative;
+    z-index: 1;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid rgba(210, 206, 206, 0.842);
+  }
+
+  .login-nav {
+    position: relative;
+    padding: 0;
+    margin: 0 0 2rem 0;
+  }
+
+  .login-nav__item {
+    list-style: none;
+    display: inline-block;
+  }
+
+  .login-nav__item + .login-nav__item {
+    margin-left: 1rem;
+  }
+
+  .login-nav__item a {
+    position: relative;
+    color: rgba(229, 229, 229, 0.929);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 1rem;
+    padding-bottom: .25rem;
+    transition: .20s all ease;
+  }
+
+  .login-nav__item.active a,
+  .login-nav__item a:hover {
+    color: #ffffff;
+    transition: .15s all ease;
+  }
+
+  .login-nav__item a:after {
+    content: '';
+    display: inline-block;
+    height: 8px;
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    right: 100%;
+    bottom: -1px;
+    left: 0;
+    border-radius: 50%;
+    transition: .15s all ease;
+  }
+
+  .login-nav__item a:hover:after,
+  .login-nav__item.active a:after {
+    background-color: rgb(17, 97, 237);
+    height: 1.5px;
+    right: 0;
+    bottom: 1px;
+    border-radius: 0;
+    transition: .20s all ease;
+  }
+
+  .login__label {
+    display: block;
+    padding-left: .5rem;
+  }
+
+  .login__label,
+  .login__label--checkbox {
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+    font-size: .65rem;
+    margin-bottom: .75rem;
+  }
+
+  .login__label--checkbox {
+    display: inline-block;
+    position: relative;
+    padding-left: 1rem;
+    margin-top: 1rem;
+    color: #ffffff;
+    font-size: .65rem;
+    text-transform: inherit;
+  }
+
+  .login__input {
+    color: white;
+    font-size: 1rem;
+    width: 100%;
+    padding: .5rem;
+    border: 2px solid transparent;
+    outline: none;
+    border-radius: 1rem;
+    background-color: rgba(211, 211, 211, 0.701);
+    letter-spacing: 0.5px;
+  }
+
+  .login__input:hover,
+  .login__input:focus {
+    color: white;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    background-color: transparent;
+  }
+
+  .login__input + .login__label {
+    margin-top: 1rem;
+  }
+
+  .login__input--checkbox {
+    position: absolute;
+    top: .1rem;
+    left: 0;
+    margin: 0;
+  }
+
+  .login__submit {
+    color: #ffffff;
+    font-size: .9rem;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-top: 1rem;
+    padding: .5rem;
+    border-radius: 1.5rem;
+    display: block;
+    width: 100%;
+    background-color: rgba(17, 97, 237, .75);
+    border: none;
+    cursor: pointer;
+  }
+
+  .login__submit:hover {
+    background-color: rgba(17, 97, 237, 1);
+  }
+
+  .login__forgot {
+    display: block;
+    margin-top: 2rem;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.75);
+    font-size: .65rem;
+    text-decoration: none;
+    position: relative;
+    z-index: 1;
+  }
+
+  .login__forgot:hover {
+    color: rgb(17, 97, 237);
+  }
